@@ -1,7 +1,7 @@
 var Lexer = function () {
   this.input = '';
   this.buffer = '';
-  this.last = 0;
+  this.last = 1;
   this.current = 0;
   this.tokens = [];
   this.inString = false;
@@ -86,7 +86,7 @@ Lexer.prototype.save = function () {
     };
     this.tokens.push(token);
   }
-  this.last = this.current;
+  this.last = this.current + 1;
   this.buffer = '';
   return token;
 };
@@ -133,6 +133,10 @@ Lexer.prototype.getType = function (str) {
     return 'keyword';
   }
   return 'id';
+};
+
+Lexer.prototype.getTokens = function () {
+  return this.tokens;
 };
 
 Lexer.parse = function (script) {

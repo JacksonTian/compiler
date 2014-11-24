@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var Lexer = require('../lexer.js');
+var Parser = require('../parser.js');
+
+var lexer = new Lexer();
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function (str) {
+  lexer.parse(str);
+});
+process.stdin.on('end', function () {
+  lexer.end();
+  var tokens = lexer.getTokens();
+  var parser = new Parser(tokens);
+  var ast = parser.parse();
+  console.log(ast[0].child);
+});

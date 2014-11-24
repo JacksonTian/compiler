@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var Lexer = require('../lib/lexer');
+var Parser = require('../lib/parser');
+var Stream = require('../lib/stream');
+
+var source = "";
+
+process.stdin.setEncoding('utf8');
+
+process.stdin.on('data', function (str) {
+  source += str;
+});
+
+process.stdin.on('end', function () {
+  var lex = new Lexer(new Stream(source));
+  var parser = new Parser(lex);
+  parser.program(source);
+});
