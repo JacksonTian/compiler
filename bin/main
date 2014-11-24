@@ -16,4 +16,5 @@ process.stdin.on('end', function () {
   var lex = new Lexer(new Stream(source));
   var parser = new Parser(lex);
   parser.program(source);
+  console.log('\n');
 });
