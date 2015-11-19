@@ -17,7 +17,7 @@
   ],
 
   "node": true,
-  "es5": true,
+  "esnext": true,
   "bitwise": true,
   "curly": true,
   "eqeqeq": true,
@@ -29,7 +29,7 @@
   "nonew": true,
   "plusplus": false,
   "undef": true,
-  "strict": false,
+  "strict": true,
   "trailing": false,
   "globalstrict": true,
   "nonstandard": true,
