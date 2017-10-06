@@ -1,0 +1,26 @@
+{
+  "name": "compiler",
+  "version": "1.0.0",
+  "description": "Compiler",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "lint": "eslint --fix lib bin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacksonTian/compiler.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JacksonTian/compiler/issues"
+  },
+  "homepage": "https://github.com/JacksonTian/compiler#readme",
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  }
+}

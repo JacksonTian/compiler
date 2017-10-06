@@ -9,3 +9,6 @@ test:
 
 clean:
 	rm -rf tests/*.i
+
+lint:
+	npm run lint
